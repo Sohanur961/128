@@ -1,0 +1,20 @@
+// Use it to Preventing Double Form Submission 
+
+<form method="POST" action="..." onsubmit="return checkForm(this);">
+...
+<input type="submit" name="myButton" value="Submit">
+</form>
+
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    //
+    // validate form fields
+    //
+
+    form.myButton.disabled = true;
+    return true;
+  }
+
+</script>
